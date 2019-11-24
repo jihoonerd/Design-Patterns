@@ -28,11 +28,11 @@ Singleton pattern is useful when:
 
 Singleton provides the following advantages:
 
-1. Controlled access to a sole instance
-2. Reduced namespace
-3. Permits refinement of operations and representation
-4. Permits a variable number of instances
-5. More flexible than class operations
+* Controlled access to a sole instance
+* Reduced namespace
+* Permits refinement of operations and representation
+* Permits a variable number of instances
+* More flexible than class operations
 
 ## Caveats
 
