@@ -1,16 +1,20 @@
+from threading import Thread, Lock
 
 
 class SingletonMeta(type):
     
     _instances = {}
+    _lock = Lock()
 
     def __call__(cls, *args, **kwargs):
-        if cls not in cls._instances:
-            cls._instances[cls] = super().__call__()
+
+        with cls._lock:
+            if cls not in cls._instances:
+                cls._instances[cls] = super().__call__()
         return cls._instances[cls]
 
 
-class ResourceManagerExample(metaclass=SingletonMeta):
+class TsResourceManagerExample(metaclass=SingletonMeta):
 
     def __init__(self, resource=100):
         self._resource = resource
