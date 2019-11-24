@@ -1,7 +1,7 @@
 # Singleton Design Pattern
 
 
-Singleton pattern is one of a creational design pattern. The purpose of the pattern is ensuring a class to be only one instance and providing multiple access points to it.
+Singleton pattern is one of a creational design pattern. The purpose of the pattern is ensuring a class to have a single unique instance and providing multiple access points to it.
 
 Resource management or logging systems are good examples of using the singleton pattern since they not only need to provide multiple points of accessing specific instance but also guarantee the instance to be unique.
 
