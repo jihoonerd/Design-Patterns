@@ -17,7 +17,7 @@ Singleton pattern is useful when:
 
 ## Structure
 
-
+![singleton](./singleton.svg)
 
 ## Consequences
 
