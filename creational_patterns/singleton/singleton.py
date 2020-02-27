@@ -1,7 +1,5 @@
-
-
 class SingletonMeta(type):
-    
+
     _instances = {}
 
     def __call__(cls, *args, **kwargs):
@@ -11,7 +9,6 @@ class SingletonMeta(type):
 
 
 class ResourceManagerExample(metaclass=SingletonMeta):
-
     def __init__(self, resource=100):
         self._resource = resource
 
@@ -23,6 +20,6 @@ class ResourceManagerExample(metaclass=SingletonMeta):
         if self._resource - demand < 0:
             raise Exception("Not enough resource. Cannot proceed")
         self._resource -= demand
-    
+
     def return_resource(self, res=10):
         self._resource += res

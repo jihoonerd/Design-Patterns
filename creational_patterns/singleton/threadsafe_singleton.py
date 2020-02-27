@@ -2,7 +2,7 @@ from threading import Thread, Lock
 
 
 class SingletonMeta(type):
-    
+
     _instances = {}
     _lock = Lock()
 
@@ -15,7 +15,6 @@ class SingletonMeta(type):
 
 
 class TsResourceManagerExample(metaclass=SingletonMeta):
-
     def __init__(self, resource=100):
         self._resource = resource
 
@@ -27,6 +26,6 @@ class TsResourceManagerExample(metaclass=SingletonMeta):
         if self._resource - demand < 0:
             raise Exception("Not enough resource. Cannot proceed")
         self._resource -= demand
-    
+
     def return_resource(self, res=10):
         self._resource += res
